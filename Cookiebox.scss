@@ -1,0 +1,193 @@
+.cookiebox,
+.cookiebox *,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+.cookiebox {
+    font-family: Montserrat;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .6);
+    z-index: 999999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    &.show {
+        display: flex;
+    }
+
+    &--resource {
+        &__blocked {
+            color: #fff;
+            padding: 15px;
+            font-family: Montserrat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &:not(.allowed) {
+                iframe {
+                    display: none;
+                }
+            }
+
+            &.allowed {
+                background-color: transparent !important;
+
+                > p, > button {
+                    display: none !important;
+                }
+            }
+
+            p {
+                margin: 0;
+            }
+
+            button {
+                padding: 7px 15px;
+                border: 1px solid;
+                transition: .3s background-color ease-in-out;
+                color: #fff;
+                cursor: pointer;
+                font-size: 17px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    & * > p {
+        margin: 0;
+    }
+
+    .inner {
+        background-color: #fff;
+        max-width: 600px;
+        max-height: 100%;
+        padding: 20px 30px;
+        overflow: auto;
+
+        > .heading {
+            font-size: 33px;
+        }
+
+        .description {
+            margin: 10px 0;
+            font-size: 80%;
+            line-height: 20px;
+        }
+
+        .content {
+            .pages {
+                float: right;
+                font-size: 80%;
+                line-height: 20px;
+
+                a {
+                    color: black;
+                    text-decoration: none;
+
+                    &:hover {
+                        border-bottom: 2px solid;
+                    }
+                }
+            }
+
+            .cookies {
+                &.active {
+                    display: block !important;
+
+                    .subcookies {
+                        display: block !important;
+                        padding-left: 15px;
+                        margin-top: 5px;
+                    }
+                }
+
+                .cookie {
+                    .wrap {
+                        margin-top: 15px;
+
+                        &:not(.active) {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                        }
+
+                        &.highlight {
+                            background-color: #ffd500;
+                            padding: 15px;
+                        }
+
+                        .switch {
+                            position: relative;
+
+                            &[disabled] label {
+                                cursor: default !important;
+                            }
+
+                            label {
+                                cursor: pointer;
+
+                                input {
+                                    margin: 0 5px 0 0;
+                                }
+                            }
+                        }
+
+                        .showmore {
+                            cursor: pointer;
+                            font-size: 80%;
+                        }
+
+                        .description {
+                            padding-left: 15px;
+                            font-size: 80%;
+                            margin-top: 5px;
+                            line-height: 20px;
+
+                            &:not(.active) {
+                                display: none;
+                            }
+                        }
+
+                        .subcookies {
+                            &:not(.active) {
+                                display: none;
+                            }
+
+                            .wrap {
+                                padding-left: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+
+            button {
+                padding: 7px 15px;
+                border: 1px solid;
+                transition: .3s background-color ease-in-out;
+                color: #fff;
+                cursor: pointer;
+                font-size: 17px;
+
+                &.secondary {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
