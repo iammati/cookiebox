@@ -1,3 +1,4 @@
+import './Cookiebox.scss';
 import Cookiebox from './Cookiebox';
 
 export const initCookiebox = (filters: CookieSource[], debugMode: boolean = false) => {

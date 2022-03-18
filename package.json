@@ -1,6 +1,6 @@
 {
     "name": "@iammati/cookiebox",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "author": {
         "email": "mati_01@icloud.com",
         "name": "Mati Sediqi"
@@ -25,9 +25,12 @@
         "vite": "^2.8.6",
         "vite-plugin-time-reporter": "^1.0.0"
     },
-    "main": "./src/Libs/Cookiebox/index.ts",
+    "main": "./src/index.ts",
     "exports": {
         "./package.json": "./package.json",
-        ".": "./src/Libs/Cookiebox/index.ts"
+        ".": "./src/index.ts",
+        "./src/Sources/YouTube": "./src/Sources/YouTube.ts",
+        "./src/Sources/GoogleMaps": "./src/Sources/GoogleMaps.ts",
+        "./src/Cookiebox.scss": "./src/Cookiebox.scss"
     }
 }
