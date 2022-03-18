@@ -1,7 +1,7 @@
 {
-  "index.ts": {
+  "src/index.ts": {
     "file": "cookiebox.5bdf9016.js",
-    "src": "index.ts",
+    "src": "src/index.ts",
     "isEntry": true,
     "imports": [
       "_cookiebox.0eb956f1.js"
