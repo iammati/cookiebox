@@ -1,12 +1,13 @@
 import './Cookiebox.scss';
 import Cookiebox from './Cookiebox';
 
-export const initCookiebox = (filters: CookieSource[], debugMode: boolean = false) => {
-    window.addEventListener('load', e => {
-        const cookiebox = new Cookiebox();
-        cookiebox.DEBUG_MODE = debugMode;
+export const config = (...filters: CookieSource[]): Cookiebox => {
+    const cookiebox = new Cookiebox();
+    cookiebox.DEBUG_MODE = false;
 
-        cookiebox.addSourceFilter(filters);
-        cookiebox.init();
-    });
+    for (const filter of filters) {
+        cookiebox.addSourceFilter(filter);
+    }
+
+    return cookiebox;
 };
