@@ -1,0 +1,13 @@
+{
+  "index.ts": {
+    "file": "cookiebox.5bdf9016.js",
+    "src": "index.ts",
+    "isEntry": true,
+    "imports": [
+      "_cookiebox.0eb956f1.js"
+    ]
+  },
+  "_cookiebox.0eb956f1.js": {
+    "file": "cookiebox.0eb956f1.js"
+  }
+}
