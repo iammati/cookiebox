@@ -18,7 +18,7 @@ To list exactly what the core issues were you may take a look at the following:
 - Lightweight
 - [RFC 6265 - HTTP State Management Mechanism](https://datatracker.ietf.org/doc/html/rfc6265) compliant (thanks to js-cookie)
 - No jQuery
-- Modern compiler, TypeScript & ES6 support
+- Modern compiler, optional TypeScript & ES6 support
 - Extending is super simple
 
 #### Static cached HTML files issue
