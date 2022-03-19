@@ -1,5 +1,6 @@
-![Npm package version](https://badgen.net/npm/v/@iammati/cookiebox)
-
+![Version](https://img.shields.io/npm/v/@iammati/cookiebox?color=hotpink&label=version&style=for-the-badge)
+![TypeScript support](https://img.shields.io/badge/supports-TypeScript-blue?style=for-the-badge)
+![ES6 support](https://img.shields.io/badge/supports-ES6-gold?style=for-the-badge)
 
 # @iammati/cookiebox
 
